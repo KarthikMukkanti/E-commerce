@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ADD A NEW ADDRESS</title>
+    <link rel="stylesheet" type="text/css" href="address.css">
+</head>
+<script>
+
+    function pay(){
+    var n = document.getElementById("name").value
+    if(n=="")
+    {
+        alert("enter your name");
+        return false;
+    }
+    var n = document.getElementById("number").value
+    if(n=="")
+    {
+        alert("enter your number");
+        return false;
+    }
+    if(isNaN(n))
+    {
+        alert("enter valid number");
+        return false;
+    }
+    if(n.length<10 || n.length>10)
+    {
+        alert("no.of digits should be 10");
+        return false;
+    }
+    if(n.charAt(0)!=9 && n.charAt(0)!=8 && n.charAt(0)!=7 && n.charAt(0)!=6)
+    {
+        alert("enter valid number");
+        return false;
+    } 
+    var add1 = document.getElementById("add1").value
+    if(add1=="")
+    {
+        alert("enter your house no");
+        return false;
+    }
+    var add = document.getElementById("add2").value
+    if(add=="")
+    {
+        alert("enter your address");
+        return false;
+    }
+    if(document.getElementById("town").value=="")
+    {
+        alert("enter your city");
+        return false;
+    }
+    var dist = document.getElementById("Dist").value
+    if(dist=="")
+    {
+        alert("enter your district");
+        return false;
+    }
+    var st = document.getElementById("state").value
+    if(st=="")
+    {
+        alert("enter your state");
+        return false;
+    }
+    var c = document.getElementById("country").value
+    if(c=="Country")
+    {
+        alert("select your country");
+        return false;
+    }
+    var pc = document.getElementById("pin").value
+    if(pc=="")
+               {  
+                alert("enter a zipcode");
+                return false; 
+               }
+               else if(isNaN(pc))
+               {
+                alert("enter only numbers"); 
+                return false;
+               }
+               else if(pc.length!=6)
+               {
+                   alert("the length should be 6");
+                   return false;
+               }
+
+     
+
+    }
+    
+   
+                
+                
+
+
+
+
+
+
+
+</script>
+<body style="background:url(https://c.stocksy.com/a/NNC300/z9/762561.jpg); background-size:cover; background-repeat: no-repeat;">
+    <div class="form">
+          <center><p><b>ADD ADDRESS</b></p></center> 
+    <form action="payment gateway.html" onsubmit="return pay()">
+    <pre>
+<center>
+<input type="text" id="name" placeholder="Enter name"><input type="text" id="number" placeholder="Mobile number">
+<p>Flat, House no.,Building,Company,Apartment</p><textarea  id="add1" rows="1" cols="100"></textarea>
+<p>Area,Colony,Street,Sector,Village</p><textarea id="add2" rows="1" cols="100"></textarea><br>
+<input  type="text" id="town" placeholder="Your City"><input  type="text" id="Dist" placeholder="Your District">
+<input  type="text" id="state" placeholder="State"><select  id="country" ><option selected disabled>Country</option> <option value="India">India</option> <option value="Singapore">Singapore</option> <option value="Qatar">Qatar</option> </select>
+<input  type="text" id="pin" placeholder="PIN code"><select  required><option selected hidden disabled>Select an address type</option> <option value="Home (7 am - 9 pm delivery)">Home (7 am - 9 pm delivery)</option> <option value="Office/Commercial (10 AM-6 PM delivery)">Office/Commercial (10 AM-6 PM delivery)</option></select>
+            <br><button type="submit"><strong>Make Payment</strong></button>
+</center>
+        </pre>
+       
+    </form>
+    </div>
+    </body>
+    
+
+
+
+    </html>
